@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Comment from "./components/Comment";
-import { commentData } from "./data";
+
 import { cdata } from "./cdata";
 function App() {
   return (
@@ -48,17 +47,17 @@ const timeDistance = (date1, date2) => {
   const seconds = Math.floor(distance / 1000);
 
   if (years >= 1) {
-    return `${years} year${years == 1 ? "" : "s"} ago`;
+    return `${years} year${years === 1 ? "" : "s"} ago`;
   } else if (months >= 1) {
-    return `${months} month${months == 1 ? "" : "s"} ago`;
+    return `${months} month${months === 1 ? "" : "s"} ago`;
   } else if (days >= 1) {
-    return `${days} day${days == 1 ? "" : "s"} ago`;
+    return `${days} day${days === 1 ? "" : "s"} ago`;
   } else if (hours >= 1) {
-    return `${hours} hour${hours == 1 ? "" : "s"} ago`;
+    return `${hours} hour${hours === 1 ? "" : "s"} ago`;
   } else if (minutes >= 1) {
-    return `${minutes} minute${minutes == 1 ? "" : "s"} ago`;
+    return `${minutes} minute${minutes === 1 ? "" : "s"} ago`;
   } else if (seconds >= 1) {
-    return `${seconds} second${seconds == 1 ? "" : "s"} ago`;
+    return `${seconds} second${seconds === 1 ? "" : "s"} ago`;
   }
   return `${years} Years ${months} months ${days} days ${hours}:${(
     "0" + minutes
